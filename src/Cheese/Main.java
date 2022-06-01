@@ -1,8 +1,8 @@
 /*
-*	grupo  :
-*	alumno :
-*	n.exp. :
-*	fecha  :
+*	grupo  : 1GDAM Mañanas
+*	alumno : Erik Terrón
+*	n.exp. : 7247
+*	fecha  : 01-06-22
  */
 package Cheese;
 
