@@ -89,7 +89,7 @@ public class ListaProductos {
         }
     }
 /**
- * 
+ * Devuelve toda la lista de productos
  * @return Retorna los productos de la lista
  */
     public ArrayList<Producto> getProductos() {
