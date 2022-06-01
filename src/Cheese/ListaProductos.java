@@ -48,7 +48,9 @@ public class ListaProductos {
  * @return retorna el valor que se ha introducido
  */
     public Producto addProducto(Producto prod) {
-        
+        if ((prod.getcode()==null) || (prod.getcode().isEmpty())) {
+            return null;
+        }
         if (listaP.containsKey(prod.getcode())) {
             // System.out.println("Producto con código duplicado");
             return null;
@@ -64,7 +66,9 @@ public class ListaProductos {
  * @return Retorna el producto eliminado
  */
     public Producto eliminarProducto(String codigo) { 
-        
+         if ((codigo==null) || (codigo.isEmpty())) {
+            return null;
+        }
         Producto prod = buscarProducto(codigo);
         if (prod != null) {
         listaP.remove(codigo);
@@ -73,12 +77,17 @@ public class ListaProductos {
         }
         return prod;
     }
-/**
+/**Comprueba que si el producto no está en la lista con ese código le
+     devolverá un valor nulo. En cambio, si está con ese código le devuelve
+     el producto con ese código
  * 
  * @param codigo Recibe como parámetro el codigo del producto que se desea buscar
  * @return retorna el producto
  */
     public Producto buscarProducto(String codigo) { 
+         if ((codigo==null) || (codigo.isEmpty())) {
+            return null;
+        }
         Producto prod = null;
         
         if (!listaP.containsKey(codigo)) {
@@ -87,6 +96,7 @@ public class ListaProductos {
         else{
             return listaP.get(codigo);
         }
+        
     }
 /**
  * Devuelve toda la lista de productos
